@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px 100px 20px 100px ;
+    padding: 0;
+    text-align: center;
+}
+#home img {
+    width: 100%; /* Ảnh chiếm 80% chiều rộng trang */
+    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
+    display: block;
+    margin: 20px auto; /* Căn giữa ảnh */
+    border-radius: 10px; /* Bo góc ảnh */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng nhẹ */
+}
+
+header {
+    background-color: #ff6600;
+    padding: 15px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.page {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+.menu-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Chia thành 4 cột bằng nhau */
+    gap: 20px; /* Khoảng cách giữa các món ăn */
+    justify-content: center;
+    padding: 20px;
+}
+#cart-list button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#cart-list button:hover {
+    background-color: darkred;
+}
+
+
+.food-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #cc5500;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.cart-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.cart-details {
+    flex-grow: 1;
+}
+
+.cart-details p {
+    margin: 5px 0;
+}
+
+.cart-item button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: darkred;
+}
+
+#total-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+}

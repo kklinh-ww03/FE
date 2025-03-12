@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Food Shop</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showPage('home')">Trang chủ</a></li>
+                <li><a href="#" onclick="showPage('menu')">Thực đơn</a></li>
+                <li><a href="#" onclick="showPage('contact')">Liên hệ</a></li>
+                <li><a href="#" onclick="showPage('cart')">Giỏ hàng (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Trang chủ -->
+        <section id="home" class="page">
+            <h2>Chào mừng đến với Food Shop</h2>
+            <img src="images/trangchu.jpg" alt="Cửa hàng của chúng tôi">
+        </section>
+
+        <!-- Trang thực đơn -->
+        <section id="menu" class="page" style="display: none;">
+            <h2>Thực đơn</h2>
+            <div class="menu-items">
+                <!-- Hàng 1 -->
+                <div class="food-item">
+                    <img src="images/cuaphomai.jpg" alt="Cua phô mai">
+                    <h3>Cua phô mai</h3>
+                    <p>Giá: 50,000 VND</p>
+                    <input type="number" id="qty1" value="1" min="1">
+                    <button onclick="addToCart('Cua phô mai', 50000, 'qty1', 'images/cuaphomai.jpg')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="images/duanuongnhannho.jpg" alt="Dừa nướng nhân nho">
+                    <h3>Dừa nướng nhân nho</h3>
+                    <p>Giá: 40,000 VND</p>
+                    <input type="number" id="qty2" value="1" min="1">
+                    <button onclick="addToCart('Dừa nướng nhân nho', 40000, 'qty2', 'images/duanuongnhannho.jpg')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="images/cuondambong.jpg" alt="Cuộn dăm bông">
+                    <h3>Cuộn dăm bông</h3>
+                    <p>Giá: 45,000 VND</p>
+                    <input type="number" id="qty3" value="1" min="1">
+                    <button onclick="addToCart('Cuộn dăm bông', 45000, 'qty3', 'images/cuondambong.jpg')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="images/phomainamvietquoc.jpg" alt="Phô mai nam việt quốc">
+                    <h3>Phô mai nam việt quốc</h3>
+                    <p>Giá: 50,000 VND</p>
+                    <input type="number" id="qty4" value="1" min="1">
+                    <button onclick="addToCart('Phô mai nam việt quốc', 50000, 'qty4', 'images/phomainamvietquoc.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+
+            <div class="menu-items">
+                <!-- Hàng 2 -->
+                <div class="food-item">
+                    <img src="images/banhmibotoi.jpg" alt="Bánh mì bơ tỏi">
+                    <h3>Bánh mì bơ tỏi</h3>
+                    <p>Giá: 50,000 VND</p>
+                    <input type="number" id="qty5" value="1" min="1">
+                    <button onclick="addToCart('Bánh mì bơ tỏi', 50000, 'qty5', 'images/banhmibotoi.jpg')">Thêm vào giỏ</button>
+                </div>
+
+                <div class="food-item">
+                    <img src="images/tarttrunglo.jpg" alt="Tart trứng lò">
+                    <h3>Tart trứng lò</h3>
+                    <p>Giá: 50,000 VND</p>
+                    <input type="number" id="qty6" value="1" min="1">
+                    <button onclick="addToCart('Tart trứng lò', 50000, 'qty6', 'images/tarttrunglo.jpg')">Thêm vào giỏ</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trang liên hệ -->
+        <section id="contact" class="page" style="display: none;">
+            <h2>Liên hệ</h2>
+            <p>📍 Địa chỉ: 123 Đường ABC, TP. Huế</p>
+            <p>📞 Số điện thoại: 0123 456 789</p>
+            <p>📧 Email: contact@foodshop.com</p>
+        </section>
+
+        <!-- Trang giỏ hàng -->
+        <section id="cart" class="page" style="display: none;">
+            <h2>Giỏ hàng</h2>
+            <div id="cart-list"></div>
+            <div class="cart-total">
+                <span><strong>Tổng tiền:</strong></span>
+                <span><strong><span id="total-price">0</span> VND</strong></span>
+            </div>
+        </section>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
